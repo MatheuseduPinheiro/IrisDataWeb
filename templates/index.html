@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo-ico.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <title>Welcome to IrisDataWeb</title>
+</head>
+<body>
+    <img class="plano-de-fundo" src="{{ url_for('static', filename='images/fundo-home.webp') }}">
+
+    <div class="container">
+        <header>
+            <h2 class="title-page">Welcome to IrisDataWeb</h2>
+        </header>
+        <div id="logo-homer">
+            <img id="logo" src="{{ url_for('static', filename='images/logo.png') }} "  alt="Logo do IrisDataWeb">
+        </div>
+        <div class="gatways">
+            <div class="main">
+                <button type="submit"><a href="programa">Enter</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
