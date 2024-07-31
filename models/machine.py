@@ -29,7 +29,7 @@ sv = SVC(kernel='linear')
 sv.fit(X_train, y_train)
 
 # Salvar o modelo treinado
-#pickle.dump(sv, open('iris.pkl', 'wb'))
+pickle.dump(sv, open('iris.pkl', 'wb'))
 
 # Opcional: Exibir as primeiras linhas para verificar a preparação
 print(df.head())

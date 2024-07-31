@@ -13,7 +13,7 @@
             <p></p>
         </div>
         
-        <form method="POST", action="{{url_for('predict')}}">
+        <form method="POST" action="{{ url_for('program.predict') }}">
             <div class="input">
                 <label for="comprimentoSepala">Comprimento da sépala (em centímetros):</label>
                 <input type="number" id="comprimentoSepala" name="a" step="0.1" placeholder="Digite o comprimento da sépala">
@@ -34,27 +34,25 @@
                 <input type="number" id="larguraPetala" name="d" step="0.1" placeholder="Digite a largura da pétala">
             </div>
 
-            <input type="submit" , value='Prever' >
+            <input type="submit" value="Prever">
         </form>
         
         <div class="output">
             <h1>PREVISÃO:</h1>
             
-            {% if data == 0 %}
-                <h2>Iris-setosa</h2>
-                <img src="{{ url_for('static', filename='setosa.jpg') }}" alt="Iris-setosa">
-            
-            {% elif data == 1 %}
-                <h2>Iris-versicolor</h2>
-                <img src="{{ url_for('static', filename='versicolor.jpg') }}" alt="Iris-versicolor">
+            {% if data is not none %}
+                {% if data == 0 %}
+                    <h2>Iris-setosa</h2>
+                    <img src="{{ url_for('static', filename='setosa.jpg') }}" alt="Iris-setosa">
                 
-            {% elif data == 2 %}
-                <h2>Iris-virginica</h2>
-                <img src="{{ url_for('static', filename='virginica.jpg') }}" alt="Iris-virginica">
-        
-            {% else %}
-                <h2>Desconhecida</h2>
-                <img src="{{ url_for('static', filename='default.jpg') }}" alt="Desconhecida">
+                {% elif data == 1 %}
+                    <h2>Iris-versicolor</h2>
+                    <img src="{{ url_for('static', filename='versicolor.jpg') }}" alt="Iris-versicolor">
+                    
+                {% elif data == 2 %}
+                    <h2>Iris-virginica</h2>
+                    <img src="{{ url_for('static', filename='virginica.jpg') }}" alt="Iris-virginica">
+                {% endif %}
             {% endif %}
         </div>
     </div>
