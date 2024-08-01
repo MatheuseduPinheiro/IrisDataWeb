@@ -6,4 +6,4 @@ app = Flask(__name__)
 app.register_blueprint(home_route)
 app.register_blueprint(program_route)
 
-app.run(debug=True)
+app.run(debug=True,host="192.168.15.11", port=5000)

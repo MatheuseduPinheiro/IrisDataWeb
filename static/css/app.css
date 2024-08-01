@@ -28,7 +28,7 @@ body {
     width: 300px;
     text-align: center;
     margin: auto; 
-    margin-top: 180px; 
+    margin-top: 120px; 
     
 }
 
@@ -78,7 +78,6 @@ body {
 
 
 
-/* Inputs */
 
 /* Inputs */
 
@@ -172,4 +171,15 @@ body {
 
 #enter-inputs:hover {
     background-color: #0056b3;
+}
+
+.mensagem-de-erro {
+    color: red; 
+    font-size: 0.9em; 
+    margin-top: 5px; /* Espaço acima da mensagem */
+    visibility: hidden; /* Inicialmente, a mensagem está oculta */
+}
+
+.input input:invalid + .mensagem-de-errado {
+    visibility: visible; /* A mensagem aparece quando o input é inválido */
 }
