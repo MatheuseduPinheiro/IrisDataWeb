@@ -8,9 +8,7 @@
     <title>IrisDataWeb - Inputs</title>
 </head>
 <body>
-
     <img class="plano-de-fundo" src="{{ url_for('static', filename='images/Irishome.jpg') }}">
-
 
     <div class="container-inputs">
         <div id="header-inputs">
@@ -18,7 +16,7 @@
             <p></p>
         </div>
         
-        <form method="POST" action="{{ url_for('program.predict') }}">
+        <form method="POST" action="{{ url_for('app.predict') }}">
             <div class="input">
                 <label for="comprimentoSepala">Comprimento da sépala (em centímetros):</label>
                 <input type="number" id="comprimentoSepala" name="a" step="0.1" placeholder="Digite o comprimento da sépala" required>
@@ -43,7 +41,6 @@
                     <button type="submit">Prever</button>
                 </div>
             </div>
-            
         </form>
         
         <div class="output">
