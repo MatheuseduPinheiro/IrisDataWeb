@@ -17,9 +17,17 @@
         <div id="logo-homer">
             <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo do IrisDataWeb">
         </div>
+        <div class="text">
+            <p>Este projeto, intitulado IrisDataWeb, foi criado com o objetivo de explorar e aplicar meus conhecimentos em machine learning 
+                integrados a uma interface web. 
+                A ideia principal foi desenvolver uma aplicação 
+                prática que utiliza modelos de aprendizado de máquina, como o famoso dataset Iris,
+                para oferecer previsões de maneira interativa e acessível através de um ambiente online.</p>
+        </div>
         <div class="gatways">
             <div class="main">
-                <button><a href="{{ url_for('app.program') }}">Enter</a></button>
+                <a href="{{ url_for('app.program') }}" class="button">Enter</a>
+               
             </div>
         </div>
     </div>

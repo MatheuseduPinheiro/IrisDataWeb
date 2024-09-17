@@ -55,7 +55,7 @@ body {
     
 }
 
-.gatways button {
+.gatways a {
     padding: 10px 20px;
     background-color:  #353c8d;
     color: white;
@@ -67,7 +67,7 @@ body {
     font-family: 'Roboto Mono'
 }
 
-.gatways button:hover {
+.gatways a:hover {
     background-color: #8b3a8d;
 }
 
@@ -182,4 +182,14 @@ body {
 
 .input input:invalid + .mensagem-de-errado {
     visibility: visible; /* A mensagem aparece quando o input é inválido */
+}
+
+.text {
+    padding: 20px;
+    background-color: #ffffff; /* Cor de fundo branca para contraste */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centraliza o bloco e adiciona margem superior e inferior */
+    max-width: 800px; /* Largura máxima para limitar o tamanho do texto */
+    text-align: center; /* Centraliza o texto */
 }
